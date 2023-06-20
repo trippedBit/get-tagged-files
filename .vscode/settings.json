@@ -1,0 +1,16 @@
+{
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./unittests",
+        "-p",
+        "test_*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true,
+    "python.linting.pycodestyleEnabled": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.linting.pycodestyleArgs": [
+        "--max-line-length=130"
+    ]
+}

@@ -1,0 +1,19 @@
+name: Check Python code style
+
+on:
+  pull_request:
+    types:
+      - opened
+  workflow_dispatch:
+
+jobs:
+    unittest:
+        name: Code style
+        runs-on: windows-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-python@v4
+              with:
+                python-version: "3.9.6"
+            - run: pip install pycodestyle
+            - run: python -m pycodestyle --exclude=.github,.venv,.vscode --max-line-length=130 .
